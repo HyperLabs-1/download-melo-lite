@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="amber">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melo Lite — Your Music. Pure Sound. Zero Limits.</title>
+  
+  <meta name="description" content="Melo Lite is the premier ad-free, lossless music streaming & downloading player for Android by Hyperlabs. Experience true glassmorphism, synced lyrics, 10-band EQ, and offline playback.">
+  <meta name="keywords" content="Melo Lite, EchoMusic, free music app, android music player, ad-free music, offline music downloader, synced lyrics, FLAC music player, open source music app, Hyperlabs">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Melo Lite — Your Music. Pure Sound. Zero Limits.">
+  <meta property="og:description" content="Experience true glassmorphism, synced lyrics, 10-band equalizer, and unlimited offline music playback with Melo Lite.">
+  <meta property="og:image" content="https://download-melo-lite.vercel.app/graph.png">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Melo Lite — Lossless Music Player for Android">
+  <meta name="twitter:description" content="100% Free, Zero Ads, Lossless 24-bit 192kHz Audio, Synced Lyrics & Material You Glassmorphism.">
+
+  <!-- Fonts: Unbounded, Plus Jakarta Sans, Inter, Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Space+Mono:wght@400;700&family=Unbounded:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Light Orbs & Noise Grain -->
+  <div class="ambient-scene" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+  <div class="grain-layer" aria-hidden="true"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="#top" class="brand-logo">
+        <img src="assets/images/melo-logo.webp" alt="Melo Logo" class="brand-logo-img">
+        <span class="brand-name">Melo Lite</span>
+        <span class="brand-version-badge">v1.1.0</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#showcase" class="nav-link">Showcase</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#matrix" class="nav-link">Compare</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Interactive Theme Accent Switcher -->
+        <div class="theme-picker" title="Switch Accent Color">
+          <div class="theme-dot amber active" data-color="amber" title="Cyber Amber"></div>
+          <div class="theme-dot violet" data-color="violet" title="Electric Violet"></div>
+          <div class="theme-dot emerald" data-color="emerald" title="Neon Emerald"></div>
+          <div class="theme-dot rose" data-color="rose" title="Hyper Rose"></div>
+        </div>
+
+        <a href="https://github.com/HyperLabs-1/download-melo-lite/releases/download/v1.1.0/melolite.apk" class="btn btn-primary btn-sm btn-glow header-download-cta" download="melolite.apk" title="Download Melo Lite v1.1.0 (53 MB)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>Get APK (53 MB)</span>
+        </a>
+
+        <button class="burger-btn" id="burgerToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#showcase" class="mobile-nav-link">Showcase</a>
+    <a href="#features" class="mobile-nav-link">Features</a>
+    <a href="#matrix" class="mobile-nav-link">Compare</a>
+    <a href="#download" class="mobile-nav-link">Download</a>
+    <a href="#faq" class="mobile-nav-link">FAQ</a>
+    <button class="btn btn-primary btn-sm" id="closeMobileDrawer">Close Menu</button>
+  </div>
+
+  <main id="top">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        
+        <div class="badge-pill">
+          <div class="badge-dot"></div>
+          <span>v1.1.0 Released • 53 MB • Ad-Free & Lossless</span>
+        </div>
+
+        <h1 class="hero-title">
+          Your Music.<br>Pure Sound. Zero Limits.
+        </h1>
+
+        <p class="hero-subtitle">
+          Melo Lite reimagines modern music playback. Studio-grade 24-bit 192kHz lossless audio, real-time synchronized lyrics, fluid glassmorphism, and instant offline caching — completely free by Hyperlabs.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://github.com/HyperLabs-1/download-melo-lite/releases/download/v1.1.0/melolite.apk" class="btn btn-primary btn-glow" id="heroDownloadBtn" download="melolite.apk" title="Download Melo Lite v1.1.0 APK (53 MB)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>Download v1.1.0 APK (53 MB)</span>
+          </a>
+
+          <button class="btn btn-ghost" id="playHeroDemoBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            <span>Play Live Synth Demo</span>
+          </button>
+        </div>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>53 MB Universal APK</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Zero Ads or Trackers</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Android 8.0+</span>
+          </div>
+        </div>
+
+        <!-- 3D Phone Mockup Stage -->
+        <div class="hero-stage" id="experience">
+          <div class="stage-ambient-glow"></div>
+
+          <!-- Top Depth Phone: Listen Together View -->
+          <div class="phone-mockup phone-top" data-lightbox-index="4" title="Click to view Listen Together in high resolution">
+            <div class="phone-screen">
+              <img src="assets/images/melo-listen-together.jpeg" alt="Melo Lite Listen Together Screen" class="phone-screen-img" loading="eager">
+              <div class="phone-glare"></div>
+            </div>
+          </div>
+
+          <!-- Left Phone: Synced Lyrics View -->
+          <div class="phone-mockup phone-left" data-lightbox-index="2" title="Click to view Synced Lyrics in high resolution">
+            <div class="phone-screen">
+              <img src="assets/images/melo-lyrics.jpeg" alt="Melo Lite Synced Lyrics Screen" class="phone-screen-img" loading="eager">
+              <div class="phone-glare"></div>
+            </div>
+          </div>
+
+          <!-- Center Phone: Interactive Now Playing Screen -->
+          <div class="phone-mockup phone-center" id="interactivePhone" data-lightbox-index="1" title="Click to inspect Now Playing Player">
+            <div class="phone-screen">
+              <img src="assets/images/melo-now-playing.jpeg" alt="Melo Lite Now Playing Player Screen" class="phone-screen-img" id="heroCenterScreenImg" loading="eager">
+              <div class="phone-glare"></div>
+
+              <!-- Floating Interactive Player Pill over Center Phone -->
+              <div class="phone-floating-pill">
+                <div class="floating-pill-info">
+                  <span class="floating-pill-title" id="centerTrackTitle">Hyperion Dreamscape</span>
+                  <span class="floating-pill-subtitle" id="centerTrackArtist">Melo Sounds • FLAC 24-bit</span>
+                </div>
+                <button class="floating-pill-play" id="phonePlayBtn" aria-label="Play or Pause Demo Track" title="Play live audio">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" id="phonePlayIcon">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Phone: Home & Discovery View -->
+          <div class="phone-mockup phone-right" data-lightbox-index="0" title="Click to view Home & Discovery in high resolution">
+            <div class="phone-screen">
+              <img src="assets/images/melo-home.jpeg" alt="Melo Lite Home Interface Screen" class="phone-screen-img" loading="eager">
+              <div class="phone-glare"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== METRICS & ATTRIBUTES TICKER ==================== -->
+    <section class="ticker-section" aria-label="Feature Highlights">
+      <div class="ticker-track">
+        <!-- Loop 1 -->
+        <div class="ticker-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span>500,000+ Active Audiophiles</span>
+        </div>
+        <span class="ticker-divider">•</span>
+        <div class="ticker-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          <span>100% Ad-Free Forever</span>
+        </div>
+        <span class="ticker-divider">•</span>
+        <div class="ticker-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+          <span>24-bit 192kHz Hi-Res FLAC</span>
+        </div>
+        <span class="ticker-divider">•</span>
+        <div class="ticker-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          <span>Unlimited Offline Downloads</span>
+        </div>
+        <span class="ticker-divider">•</span>
+        <div class="ticker-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          <span>Listen Together Party Mode</span>
+        </div>
+        <span class="ticker-divider">•</span>
+        <div class="ticker-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
+          <span>40% Less Battery Drain</span>
+        </div>
+        <span class="ticker-divider">•</span>
+
+        <!-- Loop 2 (For continuous scroll) -->
+        <div class="ticker-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span>500,000+ Active Audiophiles</span>
+        </div>
+        <span class="ticker-divider">•</span>
+        <div class="ticker-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          <span>100% Ad-Free Forever</span>
+        </div>
+        <span class="ticker-divider">•</span>
+        <div class="ticker-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+          <span>24-bit 192kHz Hi-Res FLAC</span>
+        </div>
+        <span class="ticker-divider">•</span>
+        <div class="ticker-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          <span>Unlimited Offline Downloads</span>
+        </div>
+        <span class="ticker-divider">•</span>
+        <div class="ticker-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          <span>Listen Together Party Mode</span>
+        </div>
+        <span class="ticker-divider">•</span>
+      </div>
+    </section>
+
+    <!-- ==================== SCREENSHOT SHOWCASE MARQUEE ==================== -->
+    <section class="showcase-section" id="showcase">
+      <div class="container">
+        <div class="badge-pill section-badge-center">
+          <div class="badge-dot"></div>
+          <span>Fluid Visual Experience</span>
+        </div>
+        <h2 class="section-title">Designed for Glass. Tuned for Ears.</h2>
+        <p class="section-desc">
+          Every screen in Melo Lite is crafted with translucent frosted layers, adaptive palette tints, and high-framerate micro-animations.
+        </p>
+      </div>
+
+      <!-- Infinite tilted phone carousel -->
+      <div class="showcase-marquee-wrap">
+        <div class="showcase-track">
+          
+          <!-- Card 1: Home & Discovery -->
+          <div class="showcase-card" data-lightbox-index="0" title="Click to view Home & Discovery in full resolution">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-home.jpeg" alt="Melo Lite Home Interface" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>01</span> Home & Discovery</div>
+          </div>
+
+          <!-- Card 2: Now Playing Player -->
+          <div class="showcase-card" data-lightbox-index="1" title="Click to view Studio Now Playing Player">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-now-playing.jpeg" alt="Melo Lite Player Screen" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>02</span> Studio Now Playing</div>
+          </div>
+
+          <!-- Card 3: Synced Live Lyrics -->
+          <div class="showcase-card" data-lightbox-index="2" title="Click to view Synced Live Lyrics">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-lyrics.jpeg" alt="Melo Lite Synced Lyrics Screen" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>03</span> Synced Live Lyrics</div>
+          </div>
+
+          <!-- Card 4: Library & Offline Vault -->
+          <div class="showcase-card" data-lightbox-index="3" title="Click to view Audiophile Library & Downloads">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-library.jpeg" alt="Melo Lite Library Screen" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>04</span> Library & Offline</div>
+          </div>
+
+          <!-- Card 5: Listen Together Party -->
+          <div class="showcase-card" data-lightbox-index="4" title="Click to view Listen Together Syncplay">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-listen-together.jpeg" alt="Melo Lite Listen Together Party" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>05</span> Listen Together</div>
+          </div>
+
+          <!-- Card 6: Global Search & Import -->
+          <div class="showcase-card" data-lightbox-index="5" title="Click to view Global Search & Playlist Import">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-search.jpeg" alt="Melo Lite Search Screen" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>06</span> Global Search & Import</div>
+          </div>
+
+          <!-- Duplicate 6 Cards for Seamless Infinite Marquee Loop -->
+          <div class="showcase-card" data-lightbox-index="0">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-home.jpeg" alt="Melo Lite Home Interface" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>01</span> Home & Discovery</div>
+          </div>
+
+          <div class="showcase-card" data-lightbox-index="1">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-now-playing.jpeg" alt="Melo Lite Player Screen" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>02</span> Studio Now Playing</div>
+          </div>
+
+          <div class="showcase-card" data-lightbox-index="2">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-lyrics.jpeg" alt="Melo Lite Synced Lyrics Screen" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>03</span> Synced Live Lyrics</div>
+          </div>
+
+          <div class="showcase-card" data-lightbox-index="3">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-library.jpeg" alt="Melo Lite Library Screen" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>04</span> Library & Offline</div>
+          </div>
+
+          <div class="showcase-card" data-lightbox-index="4">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-listen-together.jpeg" alt="Melo Lite Listen Together Party" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>05</span> Listen Together</div>
+          </div>
+
+          <div class="showcase-card" data-lightbox-index="5">
+            <div class="showcase-phone-frame">
+              <div class="showcase-screen">
+                <img src="assets/images/melo-search.jpeg" alt="Melo Lite Search Screen" class="showcase-img" loading="lazy">
+                <div class="showcase-glare"></div>
+                <div class="showcase-inspect-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>Inspect Screen</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-label"><span>06</span> Global Search & Import</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BENTO GRID FEATURES ==================== -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="badge-pill">
+          <div class="badge-dot"></div>
+          <span>Uncompromised Architecture</span>
+        </div>
+        <h2 class="section-title">Everything Spotify Demands Money For. Completely Free.</h2>
+        <p class="section-desc">
+          Engineered from scratch without corporate bloat, telemetry, or paywalls. Every feature is tuned for audiophiles.
+        </p>
+
+        <div class="bento-grid">
+          
+          <!-- Bento 1: Studio Grade Equalizer (Interactive) -->
+          <div class="glass-panel bento-card col-8">
+            <div>
+              <div class="card-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="4" y1="21" x2="4" y2="14"/>
+                  <line x1="4" y1="10" x2="4" y2="3"/>
+                  <line x1="12" y1="21" x2="12" y2="12"/>
+                  <line x1="12" y1="8" x2="12" y2="3"/>
+                  <line x1="20" y1="21" x2="20" y2="16"/>
+                  <line x1="20" y1="12" x2="20" y2="3"/>
+                  <line x1="1" y1="14" x2="7" y2="14"/>
+                  <line x1="9" y1="8" x2="15" y2="8"/>
+                  <line x1="17" y1="16" x2="23" y2="16"/>
+                </svg>
+              </div>
+              <h3 class="card-title">10-Band Studio Equalizer & Audio Engine</h3>
+              <p class="card-text">
+                Direct hardware DSP processing with 32-bit floating point precision. Tweak frequency bands in real-time with bass boost, virtualizer, and acoustic reverbs.
+              </p>
+            </div>
+
+            <!-- Interactive EQ Sliders Box -->
+            <div class="interactive-eq-box">
+              <div class="eq-sliders-row" id="interactiveEqRow">
+                <div class="interactive-slider-col">
+                  <input type="range" min="-12" max="12" value="6" data-band="0" class="eq-slider">
+                  <span class="slider-label">32Hz</span>
+                </div>
+                <div class="interactive-slider-col">
+                  <input type="range" min="-12" max="12" value="4" data-band="1" class="eq-slider">
+                  <span class="slider-label">64Hz</span>
+                </div>
+                <div class="interactive-slider-col">
+                  <input type="range" min="-12" max="12" value="8" data-band="2" class="eq-slider">
+                  <span class="slider-label">125Hz</span>
+                </div>
+                <div class="interactive-slider-col">
+                  <input type="range" min="-12" max="12" value="2" data-band="3" class="eq-slider">
+                  <span class="slider-label">250Hz</span>
+                </div>
+                <div class="interactive-slider-col">
+                  <input type="range" min="-12" max="12" value="0" data-band="4" class="eq-slider">
+                  <span class="slider-label">500Hz</span>
+                </div>
+                <div class="interactive-slider-col">
+                  <input type="range" min="-12" max="12" value="3" data-band="5" class="eq-slider">
+                  <span class="slider-label">1kHz</span>
+                </div>
+                <div class="interactive-slider-col">
+                  <input type="range" min="-12" max="12" value="5" data-band="6" class="eq-slider">
+                  <span class="slider-label">2kHz</span>
+                </div>
+                <div class="interactive-slider-col">
+                  <input type="range" min="-12" max="12" value="7" data-band="7" class="eq-slider">
+                  <span class="slider-label">4kHz</span>
+                </div>
+                <div class="interactive-slider-col">
+                  <input type="range" min="-12" max="12" value="9" data-band="8" class="eq-slider">
+                  <span class="slider-label">8kHz</span>
+                </div>
+                <div class="interactive-slider-col">
+                  <input type="range" min="-12" max="12" value="6" data-band="9" class="eq-slider">
+                  <span class="slider-label">16kHz</span>
+                </div>
+              </div>
+
+              <div class="eq-controls-row">
+                <div class="toggle-switch-wrap">
+                  <div class="switch-toggle active" id="bassBoostToggle">
+                    <div class="switch-handle"></div>
+                  </div>
+                  <span>Dynamic Bass Boost</span>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--accent-primary);">Profile: Studio Masters</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 2: Synced Live Lyrics with Real App Screenshot -->
+          <div class="glass-panel bento-card col-4">
+            <div>
+              <div class="card-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                  <line x1="12" y1="19" x2="12" y2="22"/>
+                </svg>
+              </div>
+              <h3 class="card-title">Live Synced Karaoke Lyrics</h3>
+              <p class="card-text">Word-by-word synchronized scrolling typography powered by LRCLIB with instant offline caching.</p>
+            </div>
+
+            <!-- Bento App Screenshot Frame -->
+            <div class="bento-phone-preview" data-lightbox-index="2" title="Inspect Synced Lyrics">
+              <div class="bento-phone-screen">
+                <img src="assets/images/melo-lyrics.jpeg" alt="Melo Lite Synced Lyrics" class="bento-phone-img" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 3: Offline Vault & Direct Downloads with Real App Screenshot -->
+          <div class="glass-panel bento-card col-4">
+            <div>
+              <div class="card-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </div>
+              <h3 class="card-title">Uncapped Offline Vault</h3>
+              <p class="card-text">Download entire albums or playlists in lossless FLAC (1411kbps) or 320kbps MP3 directly to your storage.</p>
+            </div>
+
+            <!-- Bento App Screenshot Frame -->
+            <div class="bento-phone-preview" data-lightbox-index="3" title="Inspect Library and Downloads">
+              <div class="bento-phone-screen">
+                <img src="assets/images/melo-library.jpeg" alt="Melo Lite Library & Downloads" class="bento-phone-img" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 4: Listen Together Syncplay with Real App Screenshot -->
+          <div class="glass-panel bento-card col-4">
+            <div>
+              <div class="card-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <h3 class="card-title">Listen Together Party</h3>
+              <p class="card-text">Create private listening rooms with millisecond-precise audio synchronization across devices anywhere.</p>
+            </div>
+
+            <!-- Bento App Screenshot Frame -->
+            <div class="bento-phone-preview" data-lightbox-index="4" title="Inspect Listen Together">
+              <div class="bento-phone-screen">
+                <img src="assets/images/melo-listen-together.jpeg" alt="Melo Lite Listen Together Party" class="bento-phone-img" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento 5: 1-Click Universal Playlist Migration with Real App Screenshot -->
+          <div class="glass-panel bento-card col-4">
+            <div>
+              <div class="card-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <polyline points="17 1 21 5 17 9"/>
+                  <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                  <polyline points="7 23 3 19 7 15"/>
+                  <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                </svg>
+              </div>
+              <h3 class="card-title">Global Search & Playlist Import</h3>
+              <p class="card-text">Paste any Spotify, Apple Music, or YouTube link to immediately import your entire saved library without manual work.</p>
+            </div>
+
+            <!-- Bento App Screenshot Frame -->
+            <div class="bento-phone-preview" data-lightbox-index="5" title="Inspect Search and Import">
+              <div class="bento-phone-screen">
+                <img src="assets/images/melo-search.jpeg" alt="Melo Lite Search Screen" class="bento-phone-img" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== COMPARISON MATRIX ==================== -->
+    <section class="matrix-section" id="matrix">
+      <div class="container">
+        <div class="badge-pill">
+          <div class="badge-dot"></div>
+          <span>Honest Comparison</span>
+        </div>
+        <h2 class="section-title">Why Melo Lite Destroys Mainstream Apps</h2>
+        <p class="section-desc">See the numbers. No hidden traps, no recurring fees, no data harvesting.</p>
+
+        <div class="glass-panel matrix-table-wrap">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="highlight-col">✨ Melo Lite</th>
+                <th>Spotify Premium</th>
+                <th>YouTube Music</th>
+                <th>Apple Music</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly Cost</td>
+                <td class="highlight-col"><span class="status-badge-free">$0.00 / Free Forever</span></td>
+                <td><span class="status-badge-paid">$11.99 / mo</span></td>
+                <td><span class="status-badge-paid">$10.99 / mo</span></td>
+                <td><span class="status-badge-paid">$10.99 / mo</span></td>
+              </tr>
+              <tr>
+                <td>Advertisements</td>
+                <td class="highlight-col"><span class="status-badge-free">Zero (Hardcoded)</span></td>
+                <td>None on Paid</td>
+                <td>None on Paid</td>
+                <td>None</td>
+              </tr>
+              <tr>
+                <td>Offline Audio Downloads</td>
+                <td class="highlight-col"><b>Unlimited FLAC & MP3</b></td>
+                <td>Encrypted in-app only</td>
+                <td>Encrypted in-app only</td>
+                <td>Encrypted in-app only</td>
+              </tr>
+              <tr>
+                <td>Maximum Audio Bitrate</td>
+                <td class="highlight-col"><b>Lossless 1411kbps (FLAC)</b></td>
+                <td>320 kbps (Ogg)</td>
+                <td>256 kbps (AAC)</td>
+                <td>Lossless (Paywalled)</td>
+              </tr>
+              <tr>
+                <td>10-Band Hardware EQ</td>
+                <td class="highlight-col"><span class="status-badge-free">Yes (Included)</span></td>
+                <td>Basic 6-band</td>
+                <td>System dependent</td>
+                <td>Preset only</td>
+              </tr>
+              <tr>
+                <td>User Account / Login</td>
+                <td class="highlight-col"><span class="status-badge-free">Not Required (Private)</span></td>
+                <td>Mandatory</td>
+                <td>Mandatory</td>
+                <td>Mandatory</td>
+              </tr>
+              <tr>
+                <td>Telemetry & Tracking</td>
+                <td class="highlight-col"><span class="status-badge-free">Zero Telemetry</span></td>
+                <td>Extensive Ads Tracking</td>
+                <td>Google Tracking</td>
+                <td>Apple Analytics</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DOWNLOAD HUB ==================== -->
+    <section class="download-section" id="download">
+      <div class="container">
+        <div class="download-box">
+          
+          <!-- Developer Verified Badge with Dual Logos -->
+          <div class="verified-developer-card">
+            <div class="verified-badges-row">
+              <div class="logo-chip">
+                <img src="assets/images/melo-logo.webp" alt="Melo Logo" class="chip-melo-logo">
+                <span>Melo Lite</span>
+              </div>
+              <div class="chip-connector">✦</div>
+              <div class="logo-chip">
+                <img src="assets/images/hyperlabs-logo.webp" alt="Hyperlabs Logo" class="chip-hl-logo">
+                <span>Hyperlabs Official</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="badge-pill" style="margin-bottom: 20px;">
+            <div class="badge-dot"></div>
+            <span>v1.1.0 Universal APK • 53 MB Verified Release</span>
+          </div>
+
+          <h2 style="font-size: clamp(2.2rem, 5.5vw, 3.8rem); margin-bottom: 16px;">
+            Get Melo Lite Free Today.
+          </h2>
+
+          <p style="max-width: 580px; margin: 0 auto; color: var(--ink-secondary);">
+            Experience what music streaming should have been all along. Official v1.1.0 release (53 MB), zero bloat, zero ads, and works flawlessly on Android 8.0 and above.
+          </p>
+
+          <div class="download-cards-grid">
+            
+            <!-- Direct APK Card (Official APK Download Link) -->
+            <a href="https://github.com/HyperLabs-1/download-melo-lite/releases/download/v1.1.0/melolite.apk" class="dl-card dl-card-featured" id="directApkCard" download="melolite.apk" title="Direct Download melolite.apk (53 MB)">
+              <div class="dl-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0001 0-.5515.4482-.9996.9993-.9996.5516 0 .9997.4481.9997.9996 0 .5515-.4481 1.0001-.9997 1.0001m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0001 0-.5515.4482-.9996.9993-.9996.5516 0 .9997.4481.9997.9996 0 .5515-.4481 1.0001-.9997 1.0001m11.4045-6.02l1.997-3.459a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4116 13.8533 8 12 8s-3.5902.4116-5.1365 1.15l-2.0223-3.503a.416.416 0 00-.5676-.1521.416.416 0 00-.1521.5676l1.997 3.459C2.6889 11.2863.3435 15.0452 0 19.5h24c-.3435-4.4548-2.6889-8.2137-6.1185-10.1786"/>
+                </svg>
+              </div>
+              <div class="dl-info">
+                <h4>Universal APK (v1.1.0)</h4>
+                <p>53 MB • All Android 8.0+ Devices</p>
+              </div>
+              <span class="dl-pill-tag">Direct melolite.apk</span>
+            </a>
+
+            <!-- GitHub Releases Card -->
+            <a href="https://github.com/HyperLabs-1/download-melo-lite/releases" target="_blank" rel="noopener noreferrer" class="dl-card">
+              <div class="dl-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </div>
+              <div class="dl-info">
+                <h4>GitHub Releases</h4>
+                <p>HyperLabs-1 / download-melo-lite</p>
+              </div>
+              <span class="dl-pill-tag">Signed Checksums</span>
+            </a>
+
+            <!-- F-Droid Open Source Card -->
+            <a href="https://github.com/HyperLabs-1/download-melo-lite" target="_blank" rel="noopener noreferrer" class="dl-card">
+              <div class="dl-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V18h-2v-1.07A6 6 0 0 1 6.07 12H7a5 5 0 0 0 4 4.9V13H9v-2h2V9a1 1 0 0 1 2 0v2h2v2h-2v3.9a5 5 0 0 0 4-4.9h.93A6 6 0 0 1 13 16.93z"/>
+                </svg>
+              </div>
+              <div class="dl-info">
+                <h4>Open Source Repository</h4>
+                <p>Audited Clean Code by Hyperlabs</p>
+              </div>
+              <span class="dl-pill-tag">MIT License</span>
+            </a>
+
+          </div>
+
+          <!-- 3-Step Install Guide -->
+          <h4 style="font-family: var(--font-heading); font-size: 18px; margin-top: 40px; color: var(--ink-primary);">How to Install in 3 Easy Steps</h4>
+          <div class="install-steps">
+            <div class="step-card">
+              <div class="step-number">01</div>
+              <h5>Download APK</h5>
+              <p>Tap the download button above to save <b>melolite.apk (53 MB)</b> directly from GitHub Releases to your device.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <h5>Allow Unknown Apps</h5>
+              <p>When prompted by Android, toggle "Allow from this source" in your browser settings (Chrome, Samsung Internet, Firefox).</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <h5>Tap Install & Enjoy</h5>
+              <p>Open the downloaded package, click Install, and start enjoying ad-free lossless music immediately.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ACCORDION (ENHANCED & COMPREHENSIVE) ==================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="badge-pill section-badge-center">
+          <div class="badge-dot"></div>
+          <span>Got Questions?</span>
+        </div>
+        <h2 class="section-title" style="text-align: center;">Frequently Asked Questions</h2>
+        <p class="section-desc" style="text-align: center;">Everything you need to know about Melo Lite v1.1.0, safety, offline downloads, and audio features.</p>
+
+        <div class="faq-list">
+          
+          <!-- FAQ 1: Truly 100% Free -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Is Melo Lite really 100% free with no hidden charges or subscriptions?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, absolutely. Melo Lite is 100% free forever. There are zero subscriptions, no paywalled bitrate tiers, no audio interruptions, and no banner advertisements. The project is maintained with passion by Hyperlabs as an open-source gift to the music community.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2: Why 53 MB size -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Why is the APK size 53 MB? What is packed inside?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Unlike lightweight web wrappers that rely on external dependencies, Melo Lite’s 53 MB APK includes standalone, hardware-accelerated audio libraries: native 24-bit 192kHz FLAC/ALAC decoders, a 32-bit floating-point 10-band DSP equalizer engine, LRCLIB real-time karaoke lyrics parser, offline local database caching, and high-DPI glassmorphism assets. It guarantees offline performance without needing external codecs.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3: Safety & VirusTotal -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Is downloading and installing melolite.apk safe? (VirusTotal & Play Protect)</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>100% safe. Every release of Melo Lite is scanned against 70+ antivirus engines on VirusTotal and is completely clean. The app does not include any telemetry, spyware, or ad SDKs. It is signed directly by Hyperlabs and hosted publicly on GitHub Releases (<a href="https://github.com/HyperLabs-1/download-melo-lite/releases" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">HyperLabs-1/download-melo-lite</a>).</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4: Installation steps on Samsung/MIUI/Pixel -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How do I install Melo Lite APK on Samsung, Xiaomi, and Google Pixel?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Installing is quick and straightforward:
+                <br><b>1. Download:</b> Tap our direct download link to save <code>melolite.apk</code> (53 MB).
+                <br><b>2. Unknown Apps Permission:</b> Tap the downloaded file in your browser or notification bar. If Android displays a prompt saying "For your security, your phone is not allowed to install unknown apps from this source", tap <b>Settings</b> and toggle <b>"Allow from this source"</b>.
+                <br><b>3. Install:</b> Return to the installer and click <b>Install</b>. If Google Play Protect displays a verification note, choose <b>"More details" → "Install anyway"</b>.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5: Offline Downloads storage location -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Where are downloaded offline songs stored on my phone? Can I export them?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>All offline songs and albums are saved directly to your device's standard storage directory under <code>Music/MeloLite/</code>. They are saved as standard unencrypted high-quality <code>.flac</code> or 320kbps <code>.mp3</code> files with complete embedded album art, artist tags, and synced lyrics. You can transfer them to your computer, backup to an SD card, or play them in any media player.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6: Playlist Import -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I import my playlists from Spotify, Apple Music, or YouTube Music?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Yes! Melo Lite features an instant 1-click playlist importer. Simply open your Spotify or YouTube Music app, copy the public share link of any playlist or album, and paste it into the "Import" tab inside Melo Lite. The app will automatically map the tracks to lossless streams and save the playlist to your library in seconds.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 7: Android Auto & Bluetooth -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Does Melo Lite support Android Auto, Bluetooth 5.4, and High-Res Codecs (LDAC / aptX)?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Yes! Melo Lite is built on Android's official MediaSession and AudioFocus APIs. It works seamlessly with Android Auto dashboards, Bluetooth steering wheel controls, lock screen media controls, and smartwatches. It transmits true lossless audio when paired with LDAC, aptX HD, and LHDC Bluetooth headphones.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 8: Updates -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How do I receive future updates for Melo Lite?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Melo Lite includes a lightweight, non-intrusive update checker that notifies you whenever a new release is available. You can update with a single tap from within the app or download the newest APK directly from our official GitHub repository (<a href="https://github.com/HyperLabs-1/download-melo-lite/releases" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">GitHub Releases</a>).</p>
+            </div>
+          </div>
+
+          <!-- FAQ 9: Developer Contact & hello.hyperlabs@gmail.com -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Who develops Melo Lite and how can I get support or report a bug?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Melo Lite is created and maintained with love by <b>Hyperlabs</b>. If you experience any bugs, have song request issues, or want to contribute, you can email our core engineering team directly at <a href="mailto:hello.hyperlabs@gmail.com" style="color: var(--accent-primary); font-weight: 600; text-decoration: underline;">hello.hyperlabs@gmail.com</a> or open an issue on our GitHub repository. We respond promptly to all community inquiries!</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== LIVE DOCKED AUDIO PLAYER ==================== -->
+  <aside class="live-dock" id="liveDock" aria-label="Web Audio Preview Bar">
+    <div class="dock-track-info">
+      <div class="dock-art">
+        <img src="assets/images/melo-now-playing.jpeg" alt="Dock Track Art" id="dockArtImg">
+      </div>
+      <div class="dock-meta">
+        <span class="dock-title" id="dockTrackTitle">Hyperion Dreamscape</span>
+        <span class="dock-artist" id="dockTrackArtist">Melo Sounds • FLAC</span>
+      </div>
+    </div>
+
+    <!-- Live Real-Time Canvas Spectrum Visualizer -->
+    <div class="dock-visualizer">
+      <canvas id="dockCanvas" width="260" height="32"></canvas>
+    </div>
+
+    <div class="dock-controls">
+      <button class="dock-btn" id="dockPrevBtn" aria-label="Previous Track">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="19 20 9 12 19 4 19 20"/>
+          <line x1="5" y1="19" x2="5" y2="5" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </button>
+
+      <button class="dock-play-btn" id="dockPlayBtn" aria-label="Play or Pause">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" id="dockPlayIcon">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+      </button>
+
+      <button class="dock-btn" id="dockNextBtn" aria-label="Next Track">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="5 4 15 12 5 20 5 4"/>
+          <line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== SUPPORT BOT FAB (ECHOMUSIC STYLE) ==================== -->
+  <div class="support-fab" id="supportFab">
+    <div class="support-bubble" id="supportBubble">
+      👋 Need help with Melo Lite? Tap to ask our assistant!
+    </div>
+    <button class="support-trigger-btn" id="supportTrigger" aria-label="Open support chat">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Support Bot Dialog Modal -->
+  <div class="support-modal" id="supportModal">
+    <div class="support-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div style="width: 10px; height: 10px; border-radius: 50%; background: #10b981;"></div>
+        <span style="font-family: var(--font-heading); font-size: 13.5px; font-weight: 700; color: #fff;">Melo Assistant</span>
+      </div>
+      <button id="closeSupportModal" style="color: var(--ink-tertiary); font-size: 18px; line-height: 1;">&times;</button>
+    </div>
+    <div class="support-body">
+      <div class="bot-msg">
+        Hi there! How can I assist you with Melo Lite today?
+      </div>
+      <button class="quick-q-btn" data-answer="Download melolite.apk (53 MB) from our Download section or GitHub Releases, then tap Install on your Android device. It takes less than 20 seconds!">How do I install the APK?</button>
+      <button class="quick-q-btn" data-answer="Yes, 100%! All releases are built from clean open-source code without trackers or ads, and scanned clean on VirusTotal.">Is Melo Lite safe to use?</button>
+      <button class="quick-q-btn" data-answer="Simply paste your Spotify, Apple Music, or YouTube link into Melo Lite's import box.">How do I transfer my Spotify songs?</button>
+      <button class="quick-q-btn" data-answer="Yes! Tap the download icon next to any song or album to cache it directly to your phone storage in FLAC or 320kbps MP3.">Can I play songs with no internet?</button>
+      <button class="quick-q-btn" data-answer="You can reach our engineering team directly at hello.hyperlabs@gmail.com for questions, feedback, or bug reports!">How do I contact Hyperlabs support?</button>
+    </div>
+  </div>
+
+  <!-- ==================== DOWNLOAD PROGRESS MODAL ==================== -->
+  <div class="modal-overlay" id="downloadModal">
+    <div class="modal-content">
+      <div class="badge-pill" style="margin-bottom: 12px;">
+        <div class="badge-dot"></div>
+        <span>Starting Transfer</span>
+      </div>
+      <h3 style="font-size: 22px; margin-bottom: 8px;">Downloading Melo Lite v1.1.0</h3>
+      <p style="font-size: 13.5px; color: var(--ink-secondary);">
+        Fetching official release package (melolite.apk • 53 MB) from GitHub Releases...
+      </p>
+
+      <div class="modal-progress-bar">
+        <div class="modal-progress-fill" id="downloadProgressFill"></div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; color: var(--ink-tertiary); margin-bottom: 20px;">
+        <span id="downloadStatusText">Connecting to GitHub Releases...</span>
+        <span id="downloadPercentText">0%</span>
+      </div>
+
+      <button class="btn btn-ghost btn-sm" id="closeDownloadModal">Cancel</button>
+    </div>
+  </div>
+
+  <!-- ==================== FULLSCREEN INTERACTIVE LIGHTBOX MODAL ==================== -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-label="Screenshot Lightbox Viewer">
+    <div class="lightbox-dialog">
+      <button class="lightbox-close-btn" id="closeLightboxBtn" aria-label="Close Lightbox">&times;</button>
+      
+      <div class="lightbox-phone-wrap">
+        <div class="lightbox-screen">
+          <img src="assets/images/melo-now-playing.jpeg" alt="Melo Lite Interface Preview" id="lightboxImg">
+        </div>
+      </div>
+
+      <div class="lightbox-info">
+        <div class="lightbox-step-badge" id="lightboxBadge">
+          <span>SCREENSHOT 02 / 06</span>
+        </div>
+        <h3 class="lightbox-title" id="lightboxTitle">Studio Now Playing Player</h3>
+        <p class="lightbox-desc" id="lightboxDesc">
+          Experience studio-grade 24-bit 192kHz lossless FLAC streaming with fluid album art animations, transparent glass transport controls, and precise parametric equalizer controls.
+        </p>
+
+        <div class="lightbox-nav-buttons">
+          <button class="lightbox-btn" id="lightboxPrevBtn" aria-label="Previous Screenshot">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="lightbox-btn" id="lightboxNextBtn" aria-label="Next Screenshot">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <a href="https://github.com/HyperLabs-1/download-melo-lite/releases/download/v1.1.0/melolite.apk" class="btn btn-primary btn-sm btn-glow" style="margin-left: 12px;" id="lightboxDownloadBtn" download="melolite.apk" title="Download Melo Lite v1.1.0 (53 MB)">
+            <span>Download v1.1.0 APK (53 MB)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-logos">
+            <img src="assets/images/melo-logo.webp" alt="Melo Logo" class="footer-logo-img melo-footer-logo">
+            <div class="footer-logo-divider"></div>
+            <img src="assets/images/hyperlabs-logo.webp" alt="Hyperlabs Logo" class="footer-logo-img hyperlabs-footer-logo">
+          </div>
+          <h3>Melo Lite <span class="footer-version-tag">v1.1.0</span></h3>
+          <p>
+            Built with passion by <b>Hyperlabs</b>. Bringing studio-grade audio streaming, synced lyrics, and translucent glassmorphism to music lovers everywhere.
+          </p>
+          <div class="footer-contact-row">
+            <a href="mailto:hello.hyperlabs@gmail.com" class="footer-email-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>hello.hyperlabs@gmail.com</span>
+            </a>
+          </div>
+          <div style="display: flex; gap: 14px; margin-top: 18px;">
+            <a href="https://github.com/HyperLabs-1/download-melo-lite" target="_blank" rel="noopener noreferrer" style="color: var(--ink-secondary);" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" style="color: var(--ink-secondary);" aria-label="Discord">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Product</h5>
+          <ul class="footer-links">
+            <li><a href="#experience">Player</a></li>
+            <li><a href="#features">10-Band EQ</a></li>
+            <li><a href="#showcase">Synced Lyrics</a></li>
+            <li><a href="#download">APK Download (53 MB)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul class="footer-links">
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#matrix">Comparison</a></li>
+            <li><a href="https://github.com/HyperLabs-1/download-melo-lite/releases" target="_blank" rel="noopener noreferrer">Release Notes (v1.1.0)</a></li>
+            <li><a href="https://github.com/HyperLabs-1/download-melo-lite/issues" target="_blank" rel="noopener noreferrer">Issue Tracker</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Hyperlabs</h5>
+          <ul class="footer-links">
+            <li><a href="mailto:hello.hyperlabs@gmail.com">hello.hyperlabs@gmail.com</a></li>
+            <li><a href="https://github.com/HyperLabs-1/download-melo-lite" target="_blank" rel="noopener noreferrer">GitHub Project</a></li>
+            <li><a href="#download">Download v1.1.0 APK</a></li>
+            <li><a href="#faq">Safety & Verification</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Hyperlabs. Melo Lite is an independent open-source music player.</span>
+        <span>Spotify, YouTube Music, and Apple Music are trademarks of their respective owners.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
